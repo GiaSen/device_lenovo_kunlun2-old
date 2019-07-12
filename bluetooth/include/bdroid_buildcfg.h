@@ -34,6 +34,7 @@ typedef struct {
 } device_t;
 
 static const device_t devices[] = {
+    {"grus", "Xiaomi Mi 9 SE"},
     {"sirius", "Xiaomi Mi 8 SE"},
 };
 
