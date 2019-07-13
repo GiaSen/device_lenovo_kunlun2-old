@@ -2,9 +2,6 @@ on init
     # Goodix fingerprint
     chown system system /dev/goodix_fp
 
-    # Synaptics fingerpint
-    chown system system /dev/vfsspi
-
 on boot
     chown system system /sys/bus/platform/devices/soc:fingerprint_fpc/irq
     chown system system /sys/bus/platform/devices/soc:fingerprint_fpc/irq_enable
@@ -36,10 +33,6 @@ on boot
 on post-fs-data
     mkdir /data/vendor/fpc 0770 system system
     mkdir /data/vendor/goodix 0770 system system
-    mkdir /data/vendor/goodix/gf_data/authenticate 0770 system system
-    mkdir /data/vendor/goodix/gf_data/enroll 0770 system system
-    mkdir /data/vendor/syna 0770 system system
-    mkdir /data/vendor/syna/ist/ 0770 system system
     chown system system /data/vendor
     chgrp system system /data/vendor
 
