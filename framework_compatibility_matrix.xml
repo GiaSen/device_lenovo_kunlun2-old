@@ -1,5 +1,21 @@
 <compatibility-matrix version="1.0" type="framework">
     <hal format="hidl" optional="true">
+        <name>android.hardware.biometrics.fingerprint</name>
+        <version>2.1</version>
+        <interface>
+            <name>IBiometricsFingerprint</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.biometrics.fingerprint</name>
+        <version>2.1</version>
+        <interface>
+            <name>IBiometricsFingerprint</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
         <name>android.hardware.gnss</name>
         <version>1.0-1</version>
         <interface>
@@ -13,14 +29,6 @@
         <interface>
             <name>IGnss</name>
             <instance>gnss_vendor</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>android.hardware.health</name>
-        <version>2.0</version>
-        <interface>
-            <name>IHealth</name>
-            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
@@ -43,16 +51,6 @@
             <name>ISap</name>
             <instance>slot1</instance>
             <instance>slot2</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>android.hardware.secure_element</name>
-        <version>1.0</version>
-        <interface>
-            <name>ISecureElement</name>
-            <instance>xiaomi-SIM1</instance>
-            <instance>xiaomi-SIM2</instance>
-            <instance>xiaomi-eSE1</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
@@ -148,22 +146,6 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
-        <name>com.quicinc.cne.api</name>
-        <version>1.0-1</version>
-        <interface>
-            <name>IApiService</name>
-            <instance>cnd</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>com.quicinc.cne.server</name>
-        <version>2.0-2</version>
-        <interface>
-            <name>IServer</name>
-            <instance>cnd</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
         <name>vendor.display.color</name>
         <version>1.0-2</version>
         <interface>
@@ -173,7 +155,7 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.display.config</name>
-        <version>1.0-2</version>
+        <version>1.0-6</version>
         <interface>
             <name>IDisplayConfig</name>
             <instance>default</instance>
@@ -192,18 +174,6 @@
         <version>2.1</version>
         <interface>
             <name>IGoodixFingerprintDaemon</name>
-            <instance>default</instance>
-        </interface>
-        <interface>
-            <name>IGoodixFingerprintDaemonExt</name>
-            <instance>default</instance>
-        </interface>
-        <interface>
-            <name>IGoodixFingerprintDaemonFido</name>
-            <instance>default</instance>
-        </interface>
-        <interface>
-            <name>IGoodixFingerprintDaemonHbd</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -265,6 +235,15 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
+        <name>vendor.qti.hardware.data.connection</name>
+        <version>1.0</version>
+        <interface>
+            <name>IDataConnection</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.data.latency</name>
         <version>1.0</version>
         <interface>
@@ -281,6 +260,14 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
+        <name>vendor.qti.hardware.fingerprint</name>
+        <version>1.0</version>
+        <interface>
+            <name>IQtiExtendedFingerprint</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.fm</name>
         <version>1.0</version>
         <interface>
@@ -289,10 +276,26 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
+        <name>vendor.qti.hardware.improvetouch.touchcompanion</name>
+        <version>1.0</version>
+        <interface>
+            <name>ITouchCompanion</name>
+            <instance>TouchCompanionService</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.iop</name>
         <version>2.0</version>
         <interface>
             <name>IIop</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.qti.hardware.limits</name>
+        <version>1.0</version>
+        <interface>
+            <name>IThermal</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -335,7 +338,7 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.radio.ims</name>
-        <version>1.0-3</version>
+        <version>1.0-4</version>
         <interface>
             <name>IImsRadio</name>
             <instance>imsradio0</instance>
@@ -363,7 +366,7 @@
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.radio.qtiradio</name>
         <version>1.0</version>
-        <version>2.0</version>
+        <version>2.0-1</version>
         <interface>
             <name>IQtiRadio</name>
             <instance>slot1</instance>
@@ -372,6 +375,7 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.radio.uim</name>
+        <version>1.0</version>
         <version>1.1</version>
         <interface>
             <name>IUim</name>
@@ -382,6 +386,7 @@
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.radio.uim_remote_client</name>
         <version>1.0</version>
+        <version>1.1</version>
         <interface>
             <name>IUimRemoteServiceClient</name>
             <instance>uimRemoteClient0</instance>
@@ -395,14 +400,6 @@
             <name>IUimRemoteServiceServer</name>
             <instance>uimRemoteServer0</instance>
             <instance>uimRemoteServer1</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.qti.hardware.scve.objecttracker</name>
-        <version>1.0</version>
-        <interface>
-            <name>IObjectTracker</name>
-            <instance>objectTracker</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
@@ -474,6 +471,14 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
+        <name>vendor.qti.hardware.wifi.wifilearner</name>
+        <version>1.0</version>
+        <interface>
+            <name>IWifiStats</name>
+            <instance>wifiStats</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.wigig.netperftuner</name>
         <version>1.0</version>
         <interface>
@@ -486,6 +491,14 @@
         <version>1.0</version>
         <interface>
             <name>ISuppTunnelProvider</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.qti.hardware.wipower</name>
+        <version>1.0</version>
+        <interface>
+            <name>IWipower</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -510,22 +523,6 @@
         <version>1.0</version>
         <interface>
             <name>IQtiVoicePrintService</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.synaptics.fingerprints.interfaces.extensions</name>
-        <version>1.0</version>
-        <interface>
-            <name>IFpCollection</name>
-            <instance>default</instance>
-        </interface>
-        <interface>
-            <name>INavigation</name>
-            <instance>default</instance>
-        </interface>
-        <interface>
-            <name>ISensorTest</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -570,6 +567,14 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
+        <name>vendor.xiaomi.hardware.misys</name>
+        <version>2.0</version>
+        <interface>
+            <name>IMiSys</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
         <name>vendor.xiaomi.hardware.mlipay</name>
         <version>1.0-1</version>
         <interface>
@@ -594,10 +599,10 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
-        <name>vendor.xiaomi.hardware.tpdbg</name>
+        <name>vendor.xiaomi.hardware.touchfeature</name>
         <version>1.0</version>
         <interface>
-            <name>ITpdbg</name>
+            <name>ITouchFeature</name>
             <instance>default</instance>
         </interface>
     </hal>
