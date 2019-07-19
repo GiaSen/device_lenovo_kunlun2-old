@@ -49,6 +49,15 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/fingerprint/android.hardware.biometrics.fingerprint@2.1-service.lenovo_sdm710.rc:system/etc/init/android.hardware.biometrics.fingerprint@2.1-service.lenovo_sdm710.rc
 
+# FM
+PRODUCT_PACKAGES += \
+    FM2 \
+    libqcomfm_jni \
+    qcom.fmradio
+
+PRODUCT_BOOT_JARS += \
+    qcom.fmradio
+
 # Doze
 PRODUCT_PACKAGES += \
     LenovoDoze
