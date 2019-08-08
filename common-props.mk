@@ -24,6 +24,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Data modules
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.data.df.dev_name=rmnet_usb0 \
+    persist.data.netmgrd.qos.enable=true \
     persist.vendor.data.profile_update=true \
     persist.vendor.data.mode=concurrent \
     ro.vendor.use_data_netmgrd=true
@@ -34,14 +35,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.display.ad=1 \
     ro.vendor.display.ad.hdr_calib_data=/vendor/etc/hdr_config.cfg \
     ro.vendor.display.ad.sdr_calib_data=/vendor/etc/sdr_config.cfg \
-    ro.vendor.display.sensortype=2
+    ro.vendor.display.sensortype=2 \
+    vendor.display.enable_default_color_mode=0
 
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.disable_backpressure=1 \
     debug.sf.enable_hwc_vds=1 \
     sdm.debug.disable_inline_rotator=1 \
-    sdm.debug.disable_inline_rotator_secure=1
+    sdm.debug.disable_inline_rotator_secure=1 \
+    sdm.drop_skewed_vsync=1
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -50,7 +53,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Memory optimizations
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.qti.sys.fw.bservice_enable=true
+    ro.vendor.qti.am.reschedule_service=true \
+    ro.vendor.qti.sys.fw.bservice_age=5000 \
+    ro.vendor.qti.sys.fw.bservice_enable=true \
+    ro.vendor.qti.sys.fw.bservice_limit=5
 
 # Netflix custom property
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -65,8 +71,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # RCS and IMS
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.rcs.supported=0 \
-    persist.vendor.ims.disableUserAgent=0
+    persist.rcs.supported=0
 
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -77,6 +82,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.redir_party_num=1 \
     persist.vendor.radio.report_codec=1 \
     ril.subscription.types=NV,RUIM \
+    ro.telephony.default_cdma_sub=0 \
     ro.telephony.default_network=22,22 \
     telephony.lteOnCdmaDevice=1
 
