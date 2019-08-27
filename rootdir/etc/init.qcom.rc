@@ -18,6 +18,8 @@ on init
     mount none /system/etc/placeholder /vendor/overlay/SystemUIResCommon.apk bind
     mount none /system/etc/placeholder /vendor/overlay/TelecommResCommon.apk bind
     mount none /system/etc/placeholder /vendor/overlay/TelephonyResCommon.apk bind
+    mount none /system/etc/placeholder /vendor/overlay/DevicesAndroidOverlay.apk bind
+    mount none /system/etc/placeholder /vendor/overlay/DevicesOverlay.apk bind    
     mount none /system/lib64/hw/power.qcom.so /vendor/lib64/hw/power.qcom.so bind
     mount none /system/lib64/soundfx/libvolumelistener.so /vendor/lib64/soundfx/libvolumelistener.so bind
     mount none /system/lib/soundfx/libvolumelistener.so /vendor/lib/soundfx/libvolumelistener.so bind
