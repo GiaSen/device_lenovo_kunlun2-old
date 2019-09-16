@@ -44,6 +44,7 @@ endif
 
 # Platform
 #TARGET_BOARD_PLATFORM := sdm710
+FORCE_QCOM_DISPLAY_HAL_VARIANT := sdm845
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno616
 
 # Audio
