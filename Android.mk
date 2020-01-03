@@ -6,9 +6,9 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter grus sirius,$(TARGET_DEVICE)),)
-  subdir_makefiles=$(call first-makefiles-under,$(LOCAL_PATH))
-  $(foreach mk,$(subdir_makefiles),$(info including $(mk) ...)$(eval include $(mk)))
+ifeq ($(TARGET_DEVICE),kunlun2)
+include $(call all-makefiles-under,$(LOCAL_PATH))
+include $(CLEAR_VARS)
 
 include $(CLEAR_VARS)
 
