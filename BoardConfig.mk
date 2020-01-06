@@ -28,6 +28,7 @@ TARGET_BOOTLOADER_BOARD_NAME := sdm710
 TARGET_NO_BOOTLOADER := true
 
 # Kernel
+TARGET_KERNEL_CONFIG := kunlun2_defconfig
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0xA90000 androidboot.hardware=qcom androidboot.console=ttyMSM0 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 service_locator.enable=1 swiotlb=2048 androidboot.configfs=true firmware_class.path=/vendor/firmware_mnt/image loop.max_part=7 androidboot.usbcontroller=a600000.dwc3
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
@@ -38,7 +39,7 @@ BOARD_RAMDISK_OFFSET := 0x01000000
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_VERSION := 4.9 
 BOARD_KERNEL_SEPARATED_DTBO := true
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz-dtb
+TARGET_KERNEL_SOURCE := kernel/lenovo/kunlun2
 
 # Platform
 #TARGET_BOARD_PLATFORM := sdm710
