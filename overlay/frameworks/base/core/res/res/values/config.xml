@@ -514,6 +514,8 @@
          provisioning, availability etc -->
     <bool name="config_carrier_wfc_ims_available">true</bool>
 
+    <!-- True if the firmware supports connected MAC randomization -->
+    <bool name="config_wifi_connected_mac_randomization_supported">true</bool>
 
     <!-- ImsService package name to bind to by default. If none is specified in an overlay, an
          empty string is passed in -->
