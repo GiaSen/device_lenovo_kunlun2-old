@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_kunlun2.mk
+    $(LOCAL_DIR)/aosp_kunlun2.mk
