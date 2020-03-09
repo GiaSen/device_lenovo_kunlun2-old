@@ -13,24 +13,18 @@
 -lib64/vendor.qti.hardware.fm@1.0.so
 -priv-app/CNEService/CNEService.apk
 -priv-app/WfdService/WfdService.apk
--priv-app/dpmserviceapp/dpmserviceapp.apk
 -priv-app/ims/ims.apk
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
-bin/dpmd
 bin/wfdservice
-etc/dpm/dpm.conf
-etc/init/dpmd.rc
 etc/init/wfdservice.rc
 etc/permissions/audiosphere.xml
 etc/permissions/cneapiclient.xml
-etc/permissions/com.qti.dpmframework.xml
 etc/permissions/com.qti.location.sdk.xml
 etc/permissions/com.qualcomm.location.xml
 etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml
 etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml
 etc/permissions/com.qualcomm.qti.imscmservice.xml
 etc/permissions/com.quicinc.cne.xml
-etc/permissions/dpmapi.xml
 etc/permissions/embms.xml
 etc/permissions/izat.xt.srv.xml
 etc/permissions/privapp-permissions-com.qualcomm.location.xml
@@ -45,7 +39,6 @@ etc/wfdconfigsink.xml
 framework/QtiTelephonyServicelibrary.jar
 framework/audiosphere.jar
 framework/cneapiclient.jar
-framework/com.qti.dpmframework.jar
 framework/com.qti.location.sdk.jar
 framework/com.qualcomm.qti.imscmservice-V2.0-java.jar
 framework/com.qualcomm.qti.imscmservice-V2.1-java.jar
@@ -61,7 +54,6 @@ framework/com.quicinc.cne.server-V2.0-java.jar
 framework/com.quicinc.cne.server-V2.1-java.jar
 framework/com.quicinc.cne.server-V2.2-java.jar
 framework/com.quicinc.cne.server-V2.3-java.jar
-framework/dpmapi.jar
 framework/embmslibrary.jar
 framework/izat.xt.srv.jar
 framework/qcrilhook.jar
@@ -79,7 +71,6 @@ framework/vendor.qti.ims.callinfo-V1.0-java.jar
 framework/vendor.qti.ims.rcsconfig-V1.0-java.jar
 framework/vendor.qti.latency-V2.0-java.jar
 lib/com.qualcomm.qti.ant@1.0.so
-lib/com.qualcomm.qti.dpm.api@1.0.so
 lib/com.qualcomm.qti.imscmservice@1.0.so
 lib/com.qualcomm.qti.imscmservice@2.0.so
 lib/com.qualcomm.qti.imscmservice@2.1.so
@@ -96,8 +87,6 @@ lib/libFileMux.so
 lib/libOmxMux.so
 lib/libchromaflash.so
 lib/libdiag_system.so
-lib/libdpmctmgr.so
-lib/libdpmtcm.so
 lib/libfm-hci.so
 lib/libimscamera_jni.so
 lib/libimsmedia_jni.so
@@ -149,7 +138,6 @@ lib/vendor.qti.ims.rcsconfig@1.0.so
 lib/vendor.qti.imsrtpservice@1.0.so
 lib/vendor.qti.latency@2.0.so
 lib64/com.qualcomm.qti.ant@1.0.so
-lib64/com.qualcomm.qti.dpm.api@1.0.so
 lib64/com.qualcomm.qti.imscmservice@1.0.so
 lib64/com.qualcomm.qti.imscmservice@2.0.so
 lib64/com.qualcomm.qti.imscmservice@2.1.so
@@ -163,10 +151,6 @@ lib64/lib-imsvtutils.so
 lib64/libFileMux.so
 lib64/libOmxMux.so
 lib64/libdiag_system.so
-lib64/libdpmctmgr.so
-lib64/libdpmfdmgr.so
-lib64/libdpmframework.so
-lib64/libdpmtcm.so
 lib64/libfm-hci.so
 lib64/libimscamera_jni.so
 lib64/libimsmedia_jni.so
