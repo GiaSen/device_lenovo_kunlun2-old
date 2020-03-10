@@ -32,6 +32,6 @@ PRODUCT_MODEL := Lenovo K10 Note
 PRODUCT_BUILD_PROP_OVERRIDES += PRIVATE_BUILD_DESC="kunlun2_row-user 9 PKQ1.190127.001 11.0.092_190719 release-keys"
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
-BUILD_FINGERPRINT := Lenovo/kunlun2_row/kunlun2:9/PKQ1.190127.001/11.0.092_190719:user/release-keys
+BUILD_FINGERPRINT := google/walleye/walleye:8.1.0/OPM1.171019.011/4448085
 
 PRODUCT_GMS_CLIENTID_BASE := android-lenovo
