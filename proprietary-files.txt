@@ -189,3 +189,5 @@ lib64/vendor.qti.ims.callinfo@1.0.so
 lib64/vendor.qti.ims.rcsconfig@1.0.so
 lib64/vendor.qti.imsrtpservice@1.0.so
 lib64/vendor.qti.latency@2.0.so
+lib/libdisplayconfig.so
+lib64/libdisplayconfig.so
