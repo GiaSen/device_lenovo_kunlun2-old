@@ -76,7 +76,9 @@ PRODUCT_PACKAGES += \
 # IMS
 PRODUCT_PACKAGES += \
     ims-ext-common \
-    ims-ext-common_system
+    ims-ext-common_system \
+    ims_ext_common.xml
+
 
 PRODUCT_BOOT_JARS += \
     ims-ext-common_system
@@ -127,7 +129,11 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Telephony
 PRODUCT_PACKAGES += \
-    telephony-ext
+    telephony-ext \
+    qti-telephony-hidl-wrapper \
+    qti_telephony_hidl_wrapper.xml \
+    qti-telephony-utils \
+    qti_telephony_utils.xml
 
 PRODUCT_BOOT_JARS += \
     telephony-ext
