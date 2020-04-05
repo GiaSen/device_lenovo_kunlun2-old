@@ -113,6 +113,8 @@ TARGET_USES_MKE2FS := true
 
 TARGET_COPY_OUT_VENDOR := vendor
 
+BOARD_PREBUILT_VENDORIMAGE := vendor/lenovo/kunlun2/proprietary/vendor.img
+
 # QCOM
 #BOARD_USES_QCOM_HARDWARE := true
 
