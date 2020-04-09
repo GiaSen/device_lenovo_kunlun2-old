@@ -19,7 +19,7 @@ PRODUCT_PACKAGES += \
     NoCutoutOverlay
 
 # Properties
--include $(LOCAL_PATH)/common-props.mk
+-include $(LOCAL_PATH)/prop.mk
 
 # AID/fs configs
 PRODUCT_PACKAGES += \

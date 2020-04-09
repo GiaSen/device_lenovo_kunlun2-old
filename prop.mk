@@ -1,3 +1,7 @@
+# Pixel identification
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.build.fingerprint=google/flame/flame:10/QQ2A.200405.005/6254899:user/release-keys
+
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
     audio.deep_buffer.media=true \
