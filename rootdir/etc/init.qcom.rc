@@ -1,7 +1,1 @@
 import /system/etc/init/init.safailnet.rc
-
-on boot
-    mount none /system/overlay/BluetoothResCommon.apk /vendor/overlay/BluetoothResCommon.apk bind
-
-on init
-    mount none /system/etc/audio_policy_configuration.xml /vendor/etc/audio/audio_policy_configuration.xml bind

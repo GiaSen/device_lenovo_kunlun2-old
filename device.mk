@@ -29,13 +29,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     audio.a2dp.default
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio/audio_policy_configuration.xml:system/etc/audio_policy_configuration.xml
-
-# Bluetooth
-PRODUCT_PACKAGES += \
-    BluetoothResCommon
-
 # Camera
 PRODUCT_PACKAGES += \
     Snap
