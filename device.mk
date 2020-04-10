@@ -42,10 +42,6 @@ PRODUCT_PACKAGES += \
     libvulkan \
     vendor.display.config@1.0
 
-# Fingerprint
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/fingerprint/android.hardware.biometrics.fingerprint@2.1-service.lenovo_sdm710.rc:system/etc/init/android.hardware.biometrics.fingerprint@2.1-service.lenovo_sdm710.rc
-
 # FM
 PRODUCT_PACKAGES += \
     FM2 \
@@ -54,10 +50,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     qcom.fmradio
-
-# Doze
-PRODUCT_PACKAGES += \
-    LenovoDoze
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -89,10 +81,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
 
-# Placeholder
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/placeholder:system/etc/placeholder
-
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml \
@@ -101,8 +89,8 @@ PRODUCT_COPY_FILES += \
 
 # QTI
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml \
-    $(LOCAL_PATH)/permissions/privapp-permissions-qti.xml:system/etc/permissions/privapp-permissions-qti.xml
+    $(LOCAL_PATH)/permissions/qti_whitelist.xml:system/product/etc/sysconfig/qti_whitelist.xml \
+    $(LOCAL_PATH)/permissions/privapp-permissions-qti.xml:system/product/etc/permissions/privapp-permissions-qti.xml
 
 # RCS
 PRODUCT_PACKAGES += \
@@ -110,11 +98,6 @@ PRODUCT_PACKAGES += \
     rcs_service_aidl.xml \
     rcs_service_api \
     rcs_service_api.xml
-
-# Seccomp policy
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/seccomp/mediacodec-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
-    $(LOCAL_PATH)/seccomp/mediaextractor-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
@@ -152,6 +135,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 TARGET_SCREEN_HEIGHT := 2340
 TARGET_SCREEN_WIDTH := 1080
 
+# Sensors
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.sensor.light.xml:system/etc/permissions/android.hardware.sensor.light.xml \
+    frameworks/native/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml
+
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
@@ -159,10 +147,6 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 # HIDL
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/manifest.xml:system/etc/manifest.xml
-
-# Media
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/media_profiles_vendor.xml:system/etc/media_profiles_vendor.xml
 
 # Wallpapers
 PRODUCT_PACKAGES += \

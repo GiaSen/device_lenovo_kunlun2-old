@@ -61,7 +61,7 @@ USE_XML_AUDIO_POLICY_CONF := 1
 AUDIO_FEATURE_ENABLED_FM_POWER_OPT := true
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth/include
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 
 # Camera
 TARGET_USES_QTI_CAMERA_DEVICE := true
@@ -130,8 +130,13 @@ TARGET_RIL_VARIANT := caf
 
 # Sepolicy
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
-#BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/qcom/sepolicy/private
-#BOARD_PLAT_PUBLIC_SEPOLICY_DIR += device/qcom/sepolicy/public
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
+    device/qcom/sepolicy/generic/private \
+    device/qcom/sepolicy/qva/private
+
+BOARD_PLAT_PUBLIC_SEPOLICY_DIR += \
+    device/qcom/sepolicy/generic/public \
+    device/qcom/sepolicy/qva/public
 
 # Telephony
 TARGET_USES_ALTERNATIVE_MANUAL_NETWORK_SELECT := true
@@ -139,7 +144,6 @@ TARGET_USES_ALTERNATIVE_MANUAL_NETWORK_SELECT := true
 # Treble
 BOARD_VNDK_VERSION := current
 PRODUCT_FULL_TREBLE_OVERRIDE := true
-PRODUCT_EXTRA_VNDK_VERSIONS := 28
 
 # HIDL
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
@@ -151,10 +155,6 @@ TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/touch/tp_dev/gesture_on"
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
-
-# Vendor init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_kunlun2
-TARGET_RECOVERY_DEVICE_MODULES := libinit_kunlun2
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
